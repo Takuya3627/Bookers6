@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 2021_03_10_061709) do
     t.index ["following_id"], name: "index_follow_relationships_on_following_id"
   end
 
+  create_table "lists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
